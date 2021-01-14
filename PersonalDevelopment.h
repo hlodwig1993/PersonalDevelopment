@@ -18,10 +18,11 @@ class PersonalDevelopment
 
 public :
     PersonalDevelopment (string nameOfFileWithUsers, string nameOfTheFileWithIncome, string nameOfTheFileWithExpense):
-        userMenager(nameOfFileWithUsers),NAME_OF_THE_FILE_WITH_INCOME(nameOfTheFileWithIncome), NAME_OF_THE_FILE_WITH_EXPENSE(nameOfTheFileWithExpense) {};
+        userMenager(nameOfFileWithUsers),NAME_OF_THE_FILE_WITH_INCOME(nameOfTheFileWithIncome), NAME_OF_THE_FILE_WITH_EXPENSE(nameOfTheFileWithExpense) {operationOnFinance = NULL;};
     ~PersonalDevelopment()
     {
         delete operationOnFinance;
+        operationOnFinance = NULL;
     }
     void signUp();
     void signIn();
@@ -30,6 +31,8 @@ public :
     void addIncome();
     void addExpense();
     void balanceForTheCurrentMonth();
+    void balanceFromLastMonth();
+    void balanceFromTheSelectPeriod();
     void changePassword();
 };
 

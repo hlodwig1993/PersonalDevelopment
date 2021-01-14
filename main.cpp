@@ -34,9 +34,8 @@ char chooseOptionFromUserMenu()
     cout << "4. Balance for the previous month" << endl;
     cout << "5. Balance for the selected period" << endl;
     cout << "6. Change Password" << endl;
-    cout << "7. Log out" << endl;
 
-    cout << "9. Exit" << endl;
+    cout << "9. Log Out" << endl;
     cout << "---------------------------" << endl;
     cout << "Your choice: ";
     choice = AuxiliaryMethods::getChar();
@@ -48,7 +47,7 @@ char chooseOptionFromUserMenu()
 
 int main()
 {
-    PersonalDevelopment personalDevelopment ("FileWithUsers.xml","Incomes.xml","Expense.xml");
+    PersonalDevelopment personalDevelopment ("FileWithUsers.xml","Incomes.xml","Expenses.xml");
 
     char choice;
 
@@ -73,7 +72,7 @@ int main()
                 break;
             default:
                 cout<<endl<<"There is no such option in the main menu"<<endl;
-                system("pauze");
+                system("pause");
                 break;
             }
         }
@@ -92,10 +91,10 @@ int main()
                 personalDevelopment.balanceForTheCurrentMonth();
                 break;
             case '4' :
-                //personalDevelopment.addExense();
+                personalDevelopment.balanceFromLastMonth();
                 break;
             case '5' :
-                //personalDevelopment.addExense();
+                personalDevelopment.balanceFromTheSelectPeriod();
                 break;
             case '6' :
                 personalDevelopment.changePassword();

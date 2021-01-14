@@ -26,7 +26,6 @@ public:
     int getDate();
     string getItem();
     double getAmount();
-    int downloadDateAsUnixTime() const;
 };
 
 #endif

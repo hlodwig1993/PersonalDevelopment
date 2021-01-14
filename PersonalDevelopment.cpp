@@ -5,14 +5,17 @@ void PersonalDevelopment::signUp()
     userMenager.signUp();
 }
 
-
 void PersonalDevelopment::signIn()
 {
     userMenager.signIn();
+     if (userMenager.userLoggedIn()) {
+        operationOnFinance = new OperationOnFinance (NAME_OF_THE_FILE_WITH_INCOME, NAME_OF_THE_FILE_WITH_EXPENSE, userMenager.getIdOfLoggedInUser());
+    }
 }
 int PersonalDevelopment::userLoggedIn()
 {
     userMenager.userLoggedIn();
+
 }
 void PersonalDevelopment::changePassword()
 {
@@ -32,5 +35,15 @@ void PersonalDevelopment::addExpense()
 }
 void PersonalDevelopment::balanceForTheCurrentMonth()
 {
-    operationOnFinance->showVector();
+    operationOnFinance->balanceForTheCurrentMonth();
 }
+void PersonalDevelopment::balanceFromLastMonth()
+{
+    operationOnFinance->balanceFromLastMonth();
+}
+
+void PersonalDevelopment::balanceFromTheSelectPeriod()
+{
+    operationOnFinance->balanceFromTheSelectPeriod();
+}
+

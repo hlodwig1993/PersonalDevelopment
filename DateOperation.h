@@ -22,6 +22,7 @@ public:
     int getYear(string date);
     int getMonth(string date);
     int dateToInteger(string currentlyDate);
+    int getLastMonth();
 };
 
 

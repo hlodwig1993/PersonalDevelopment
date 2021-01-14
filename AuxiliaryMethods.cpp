@@ -61,6 +61,7 @@ char AuxiliaryMethods::getChar()
             break;
         }
         cout << "This is not single char. Try again" << endl;
+        system ("pause");
     }
     return znak;
 }

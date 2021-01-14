@@ -24,6 +24,16 @@ void UserMenager::signUp()
     password = AuxiliaryMethods::getLine();
     user.setUserPassword(password);
 
+    for(int i= 0; i < users.size(); i++)
+    {
+        if(users.at(i).getUserLogin() == login)
+        {
+            cout << "That login in use. Try again"<<endl;
+            system ("pause");
+            return;
+        }
+    }
+
     users.push_back(user);
     fileWithUsers.addUserToFile(user);
 

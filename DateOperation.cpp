@@ -37,12 +37,26 @@ int DateOperation::getCurrentYear()
     int year = st.wYear;
     return year;
 }
+
 int DateOperation::getCurrentMonth()
 {
     SYSTEMTIME st;
     GetSystemTime(&st);
     int month = st.wMonth;
     return month;
+}
+int DateOperation::getLastMonth()
+{
+    SYSTEMTIME st;
+    GetSystemTime(&st);
+    int month = st.wMonth;
+
+    if(month == 1)
+    {
+        return 12;
+    }
+    else
+        return month-1;
 }
 string DateOperation::userDate()
 {
@@ -74,48 +88,52 @@ bool DateOperation::numberOfDays(string currentlyDate)
     int monthInt = AuxiliaryMethods::stringOnInt(month);
     string day = currentlyDate.substr( 8, 2);
     int dayInt = AuxiliaryMethods::stringOnInt(day);
-
-
-    switch(monthInt)
+    string date = year + month + day;
+    int data = AuxiliaryMethods::stringOnInt(date);
+    if(data>20000101)
     {
-    case 1:
-    case 3:
-    case 5:
-    case 7:
-    case 8:
-    case 10:
-    case 12:
-        if (1 > dayInt || dayInt > 31)
+        switch(monthInt)
         {
-            return false;
-        }
-        break;
-    case 4:
-    case 6:
-    case 9:
-    case 11:
-        if (1> dayInt|| dayInt >30)
-        {
-            return false;
-        }
-
-        break;
-    case 2:
-        if (((yearInt % 4 == 0) && (yearInt % 100 != 0)) || (yearInt % 400 == 0))
-        {
-            if(1 >dayInt || dayInt > 29)
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            if (1 > dayInt || dayInt > 31)
             {
                 return false;
             }
             break;
-        }
-        else if(1 > dayInt || dayInt >28)
-        {
-            return false;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            if (1> dayInt|| dayInt >30)
+            {
+                return false;
+            }
+
             break;
+        case 2:
+            if (((yearInt % 4 == 0) && (yearInt % 100 != 0)) || (yearInt % 400 == 0))
+            {
+                if(1 >dayInt || dayInt > 29)
+                {
+                    return false;
+                }
+                break;
+            }
+            else if(1 > dayInt || dayInt >28)
+            {
+                return false;
+                break;
+            }
         }
+        return true;
     }
-    return true;
+    return false;
 }
 
 

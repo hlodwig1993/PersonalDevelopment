@@ -45,6 +45,3 @@ double Income::getAmount()
 {
     return amount;
 }
-int Income::downloadDateAsUnixTime() const {
-    return dateAsUnixTime;
-}
