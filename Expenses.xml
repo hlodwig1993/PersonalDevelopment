@@ -1,7 +1,57 @@
 <Expense>
 <UserId>2</UserId>
 <ExpenseId>1</ExpenseId>
-<Date>2021-01-14</Date>
-<Item Name>Darek</Item Name>
-<Amount>120.12</Amount>
+<Date>2021-01-15</Date>
+<Item Name>darek</Item Name>
+<Amount>12.2</Amount>
+<UserId>2</UserId>
+<ExpenseId>2</ExpenseId>
+<Date>2020-12-16</Date>
+<Item Name>1231.2</Item Name>
+<Amount>9.2684e-315</Amount>
+<UserId>2</UserId>
+<ExpenseId>3</ExpenseId>
+<Date>2021-01-15</Date>
+<Item Name>231.2</Item Name>
+<Amount>21.2</Amount>
+<UserId>2</UserId>
+<ExpenseId>4</ExpenseId>
+<Date>2021-01-15</Date>
+<Item Name/>
+<Amount>9.2684e-315</Amount>
+<UserId>2</UserId>
+<ExpenseId>5</ExpenseId>
+<Date>2020-01-01</Date>
+<Item Name>darek</Item Name>
+<Amount>12.2</Amount>
+<UserId>2</UserId>
+<ExpenseId>6</ExpenseId>
+<Date>2020-01-32</Date>
+<Item Name>1231</Item Name>
+<Amount>2</Amount>
+<UserId>2</UserId>
+<ExpenseId>7</ExpenseId>
+<Date>2020-01-30</Date>
+<Item Name>21</Item Name>
+<Amount>21</Amount>
+<UserId>2</UserId>
+<ExpenseId>8</ExpenseId>
+<Date>2020-01-32</Date>
+<Item Name/>
+<Amount>21</Amount>
+<UserId>2</UserId>
+<ExpenseId>9</ExpenseId>
+<Date>2020-02-01</Date>
+<Item Name>231</Item Name>
+<Amount>21</Amount>
+<UserId>2</UserId>
+<ExpenseId>10</ExpenseId>
+<Date>2020-01-20</Date>
+<Item Name>231</Item Name>
+<Amount>312</Amount>
+<UserId>2</UserId>
+<ExpenseId>11</ExpenseId>
+<Date>2020-02-03</Date>
+<Item Name>321</Item Name>
+<Amount>321</Amount>
 </Expense>

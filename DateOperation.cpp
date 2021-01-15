@@ -92,7 +92,29 @@ bool DateOperation::numberOfDays(string currentlyDate)
     int data = AuxiliaryMethods::stringOnInt(date);
     if(data>20000101)
     {
-        switch(monthInt)
+        return correctNumberOfDays(monthInt,yearInt,dayInt);
+    }
+    return false;
+}
+bool DateOperation::februaryNoOfDays(int yearInt, int dayInt)
+{
+    if (((yearInt % 4 == 0) && (yearInt % 100 != 0)) || (yearInt % 400 == 0))
+            {
+                if(1 >dayInt || dayInt > 29)
+                {
+                    return false;
+                }
+            }
+            else if(1 > dayInt || dayInt >28)
+            {
+                return false;
+
+            }
+}
+
+bool DateOperation::correctNumberOfDays(int monthInt,int yearInt,int dayInt)
+{
+    switch(monthInt)
         {
         case 1:
         case 3:
@@ -114,29 +136,13 @@ bool DateOperation::numberOfDays(string currentlyDate)
             {
                 return false;
             }
-
             break;
         case 2:
-            if (((yearInt % 4 == 0) && (yearInt % 100 != 0)) || (yearInt % 400 == 0))
-            {
-                if(1 >dayInt || dayInt > 29)
-                {
-                    return false;
-                }
-                break;
-            }
-            else if(1 > dayInt || dayInt >28)
-            {
-                return false;
-                break;
-            }
+            return februaryNoOfDays(yearInt, dayInt);
+            break;
         }
         return true;
-    }
-    return false;
 }
-
-
 int DateOperation::dateToInteger(string currentlyDate)
 {
     string year = currentlyDate.substr( 0, 4);

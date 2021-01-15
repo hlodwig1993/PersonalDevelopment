@@ -1,5 +1,4 @@
 #include "OperationOnFinance.h"
-#include "AuxiliaryMethods.h"
 
 string OperationOnFinance::addIncomeDate()
 {
@@ -172,7 +171,8 @@ void OperationOnFinance::balanceForTheCurrentMonth()
         totalExpenses += sortedExpensesFromCurrentMonth.at(j).getAmount();
     }
     cout << "Total expenses: " << totalExpenses << endl<<endl;
-    cout<< "Balance from current month : " << totalIncomes - totalExpenses <<endl;
+    double balance = totalIncomes - totalExpenses;
+    cout<< "Balance from current month : " << balance  <<endl;
 
     system("pause");
 }
@@ -351,8 +351,9 @@ void OperationOnFinance::balanceFromLastMonth()
         cout<< AuxiliaryMethods::intOnStringWithDashes(sortedExpensesFromLastMonth.at(j).getDate())<<" "<<sortedExpensesFromLastMonth.at(j).getItem()<< " " <<sortedExpensesFromLastMonth.at(j).getAmount()<< endl;
         totalExpenses += sortedExpensesFromLastMonth.at(j).getAmount();
     }
+    double balance = totalIncomes - totalExpenses;
     cout << "Total expenses: " << totalExpenses << endl<<endl;
-    cout<< "Balance from last month : " << totalIncomes - totalExpenses <<endl;
+    cout<< "Balance from last month : " << balance  <<endl;
 
     system("pause");
 }
@@ -402,8 +403,9 @@ void OperationOnFinance::balanceFromTheSelectPeriod()
         cout<< AuxiliaryMethods::intOnStringWithDashes(sortedExpensesFromSelectPeriod.at(j).getDate())<<" "<<sortedExpensesFromSelectPeriod.at(j).getItem()<< " " <<sortedExpensesFromSelectPeriod.at(j).getAmount()<< endl;
         totalExpenses += sortedExpensesFromSelectPeriod.at(j).getAmount();
     }
+    double balance = totalIncomes - totalExpenses;
     cout << "Total expenses: " << totalExpenses << endl<<endl;
-    cout<< "Balance from select period : " << totalIncomes - totalExpenses <<endl;
+    cout<< "Balance from select period : " << balance <<endl;
 
     system("pause");
 }
@@ -418,7 +420,7 @@ vector<Expense>OperationOnFinance::loadExpensesFromSelectPeriod(string dateStart
     while (itr != expenses.end())
     {
         int data = itr -> getDate();
-        if (startDate >= itr->getDate() && endDate <= itr -> getDate())
+        if (startDate <= itr->getDate() && endDate >= itr -> getDate())
         {
             expense.setExpenseId(itr -> getExpenseId());
             expense.setUserId(itr -> getUserId());

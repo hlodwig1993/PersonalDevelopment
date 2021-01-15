@@ -12,8 +12,7 @@ using namespace std;
 
 
 class FileWithIncome
-{   Income income;
-    vector<Income> incomes;
+{
     const string nameOfTheFileWithIncome;
     DateOperation dateOperation;
 

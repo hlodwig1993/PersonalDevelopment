@@ -12,6 +12,9 @@ class DateOperation
 
     string currentlyDate;
     bool numberOfDays(string currentlyDate);
+    int getDay(string date);
+    bool correctNumberOfDays(int monthInt,int yearInt,int dayInt);
+    bool februaryNoOfDays(int yearInt, int dayInt);
 
 
 public:
