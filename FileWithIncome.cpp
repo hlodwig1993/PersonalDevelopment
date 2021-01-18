@@ -61,10 +61,38 @@ vector <Income> FileWithIncome::loadIncomesFromFile(int loggedUserId)
             string amount = incomeFile.GetElemContent();
             double amountD = AuxiliaryMethods::stringOnDouble (amount);
             income.setAmount(amountD);
+            idOfLastIncome = idA1;
             if (loggedUserId == income.getUserId()){
             incomes.push_back(income);
             }
+
     }
 
     return incomes;
+}
+
+int FileWithIncome::getTheIdOfLastIncome() {
+    CMarkup incomeFile;
+    incomeFile.Load(nameOfTheFileWithIncome);
+    incomeFile.ResetPos();
+    incomeFile.FindElem();
+    incomeFile.IntoElem();
+    while(true)
+    {
+
+            bool nextPositionExists = incomeFile.FindElem();
+            if (nextPositionExists == false)
+            {
+                break;
+            }
+            incomeFile.FindElem();
+            string id1 = incomeFile.GetElemContent();
+            int idA1 = atoi(id1.c_str());;
+            incomeFile.FindElem();
+            incomeFile.FindElem();
+            incomeFile.FindElem();
+            idOfLastIncome = idA1;
+    }
+
+   return idOfLastIncome;
 }

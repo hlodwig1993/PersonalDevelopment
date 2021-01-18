@@ -73,3 +73,30 @@ vector <Expense> FileWithExpense::loadExpensesFromFile(int loggedInUserId)
     }
     return expenses;
 }
+
+int FileWithExpense::getTheIdOfLastExpense() {
+    CMarkup expenseFile;
+
+    expenseFile.Load(nameOfTheFileWithExpense);
+    expenseFile.ResetPos();
+    expenseFile.FindElem();
+    expenseFile.IntoElem();
+
+    while(true)
+    {
+
+            bool nextPositionExists = expenseFile.FindElem();
+            if (nextPositionExists == false)
+            {
+                break;
+            }
+            expenseFile.FindElem();
+            string id1 = expenseFile.GetElemContent();
+            int idA1 = atoi(id1.c_str());
+            expenseFile.FindElem();
+            expenseFile.FindElem();
+            expenseFile.FindElem();
+            idOfLastExpense = idA1;
+    }
+    return idOfLastExpense;
+}

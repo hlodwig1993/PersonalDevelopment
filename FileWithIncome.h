@@ -15,11 +15,14 @@ class FileWithIncome
 {
     const string nameOfTheFileWithIncome;
     DateOperation dateOperation;
+    int idOfLastIncome;
 
 public:
-    FileWithIncome(string NAMEOFTHEFILEWITHINCOME) : nameOfTheFileWithIncome(NAMEOFTHEFILEWITHINCOME){};
+    FileWithIncome(string NAMEOFTHEFILEWITHINCOME) : nameOfTheFileWithIncome(NAMEOFTHEFILEWITHINCOME){
+    idOfLastIncome = 0;};
     void addIncomeToFile(Income income);
     vector <Income> loadIncomesFromFile(int loggedUserId);
+    int getTheIdOfLastIncome();
 
 
 };

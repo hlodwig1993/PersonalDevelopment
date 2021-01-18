@@ -1,47 +1,27 @@
 <Incomes>
 <UserId>2</UserId>
 <IncomeId>1</IncomeId>
-<Date>2021-01-15</Date>
-<Item Name>darek</Item Name>
-<Amount>12.1</Amount>
-<UserId>3</UserId>
-<IncomeId>1</IncomeId>
-<Date>2021-01-15</Date>
-<Item Name>arek</Item Name>
-<Amount>123.2</Amount>
+<Date>2021-01-18</Date>
+<Item Name>da</Item Name>
+<Amount>1</Amount>
 <UserId>2</UserId>
 <IncomeId>2</IncomeId>
-<Date>2021-01-15</Date>
-<Item Name>marek</Item Name>
-<Amount>123.1</Amount>
+<Date>2021-01-18</Date>
+<Item Name>21</Item Name>
+<Amount>221</Amount>
 <UserId>2</UserId>
 <IncomeId>3</IncomeId>
-<Date>2021-01-15</Date>
-<Item Name>2020-12-14</Item Name>
-<Amount>121.2</Amount>
-<UserId>2</UserId>
+<Date>2021-01-18</Date>
+<Item Name>1231.1</Item Name>
+<Amount>21.2</Amount>
+<UserId>3</UserId>
 <IncomeId>4</IncomeId>
-<Date>2021-01-15</Date>
-<Item Name/>
-<Amount>9.2684e-315</Amount>
-<UserId>2</UserId>
+<Date>2021-01-18</Date>
+<Item Name>dsa</Item Name>
+<Amount>121</Amount>
+<UserId>3</UserId>
 <IncomeId>5</IncomeId>
-<Date>2020-02-01</Date>
-<Item Name>2102.2</Item Name>
-<Amount>2021.2</Amount>
-<UserId>2</UserId>
-<IncomeId>6</IncomeId>
-<Date>2021-01-15</Date>
-<Item Name/>
-<Amount>2</Amount>
-<UserId>2</UserId>
-<IncomeId>7</IncomeId>
-<Date>2020-02-30</Date>
-<Item Name>da</Item Name>
-<Amount>0</Amount>
-<UserId>2</UserId>
-<IncomeId>8</IncomeId>
-<Date>2020-01-32</Date>
-<Item Name>231</Item Name>
-<Amount>231</Amount>
+<Date>2021-01-18</Date>
+<Item Name>dasa</Item Name>
+<Amount>121.1</Amount>
 </Incomes>

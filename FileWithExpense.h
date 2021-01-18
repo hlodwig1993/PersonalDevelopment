@@ -15,11 +15,14 @@ class FileWithExpense
 {
  const string nameOfTheFileWithExpense;
  DateOperation dateOperation;
+ int idOfLastExpense;
 
 public:
-    FileWithExpense(string NAMEOFTHEFILEWITHEXPENSE) : nameOfTheFileWithExpense(NAMEOFTHEFILEWITHEXPENSE){};
+    FileWithExpense(string NAMEOFTHEFILEWITHEXPENSE) : nameOfTheFileWithExpense(NAMEOFTHEFILEWITHEXPENSE){
+    idOfLastExpense = 0;};
     void addExpenseToFile(Expense expense);
     vector <Expense> loadExpensesFromFile(int loggedInUserId);
+    int getTheIdOfLastExpense();
 
 };
 

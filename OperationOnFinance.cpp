@@ -40,7 +40,7 @@ void OperationOnFinance::addIncome()
 
     income.setUserId(loggedInUserId);
 
-    income.setIncomeId(getIdOfIncomeAmount());
+    income.setIncomeId(fileWithIncome.getTheIdOfLastIncome() + 1);
 
     if(date == "0")
     {
@@ -64,6 +64,8 @@ void OperationOnFinance::addIncome()
     incomes.push_back(income);
 
     fileWithIncome.addIncomeToFile(income);
+    cout << "Income has been added." << endl;
+    system("pause");
 
 }
 
@@ -82,12 +84,12 @@ void OperationOnFinance::addExpense()
 
         expense.setUserId(loggedInUserId);
 
-        expense.setExpenseId(getIdOfExpenseAmount());
+        expense.setExpenseId(fileWithExpense.getTheIdOfLastExpense()+1);
 
         int dataInt = dateOperation.dateToInteger(date);
         expense.setDate(dataInt);
 
-        cout << "Enter name of income : ";
+        cout << "Enter name of expense : ";
         string nameOfExpense = AuxiliaryMethods::getLine();
         expense.setItem(nameOfExpense);
 
